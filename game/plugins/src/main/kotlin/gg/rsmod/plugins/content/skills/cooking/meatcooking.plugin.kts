@@ -40,7 +40,6 @@ fun cookMeatStanding(player: Player, item: Int, amount: Int = 28) {
  * The set of cooking objects when standing is required
  */
 private val cookingObjects = setOf(
-        FIRE(obj = Objs.COOKING_RANGE, cookAnimId = STANDING_COOKING_ANIM, clickAble = true),
         FIRE(Objs.COOKING_POT_3662, STANDING_COOKING_ANIM,false),
         FIRE(Objs.COOKING_RANGE_4172,STANDING_COOKING_ANIM,false),
         FIRE(Objs.STOVE,STANDING_COOKING_ANIM,false),

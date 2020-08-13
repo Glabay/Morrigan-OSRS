@@ -40,6 +40,12 @@ on_command("max") {
     }
 }
 
+on_command("up"){
+    player.moveTo(player.tile.x, player.tile.z, player.tile.height+1)
+}
+on_command("down") {
+    player.moveTo(player.tile.x, player.tile.z, player.tile.height-1)
+}
 on_command("empty") {
     player.inventory.removeAll()
 }

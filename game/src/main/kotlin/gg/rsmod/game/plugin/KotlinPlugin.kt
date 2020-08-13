@@ -31,7 +31,7 @@ import kotlin.script.experimental.annotations.KotlinScript
  */
 @KotlinScript(
         displayName = "Kotlin Plugin",
-        fileExtension = "meatcooking.plugin.kts",
+        fileExtension = "plugin.kts",
         compilationConfiguration = KotlinPluginConfiguration::class
 )
 abstract class KotlinPlugin(private val r: PluginRepository, val world: World, val server: Server) {
@@ -251,7 +251,9 @@ abstract class KotlinPlugin(private val r: PluginRepository, val world: World, v
      * @param obj the game object id
      * @param item the item id
      */
-    fun on_item_on_obj(obj: Int, item: Int, lineOfSightDistance: Int = -1, logic: (Plugin).() -> Unit) = r.bindItemOnObject(obj, item, lineOfSightDistance, logic)
+    fun on_item_on_obj(obj: Int, item: Int, lineOfSightDistance: Int = -1, logic: (Plugin).() -> Unit) {
+        r.bindItemOnObject(obj, item, lineOfSightDistance, logic)
+    }
 
     /**
      * Invoke [plugin] when [item1] is used on [item2] or vise-versa.

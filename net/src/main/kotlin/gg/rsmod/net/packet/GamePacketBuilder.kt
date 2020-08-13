@@ -168,7 +168,6 @@ class GamePacketBuilder {
                 buffer.writeByte(longValue.toByte().toInt())
                 buffer.writeByte((longValue shr 8).toByte().toInt())
             }
-            else -> throw IllegalArgumentException("Unknown order.")
         }
     }
 
